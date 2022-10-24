@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaUser, FaMoon } from "react-icons/fa";
 import { BsSunFill } from "react-icons/bs";
 import "./Header.css";
+import { AuthContext } from "../../contexts/AuthProvider";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
   const [changeColor, setChangeColor] = useState(false);
 
   return (
@@ -47,6 +49,7 @@ const Header = () => {
               <li>
                 <Link to="/faq">FAQ</Link>
               </li>
+              <hr />
               <li>
                 <Link to="/login">Login</Link>
               </li>
