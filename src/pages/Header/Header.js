@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaMoon } from "react-icons/fa";
+import { BsSunFill } from "react-icons/bs";
+import "./Header.css";
 
 const Header = () => {
+  const [changeColor, setChangeColor] = useState(false);
+
   return (
     <div className="bg-gradient-to-l from-sky-200 via-sky-300 to-sky-200 shadow-md">
       <div className="navbar  lg:w-3/4 m-auto">
@@ -80,6 +84,23 @@ const Header = () => {
 
         {/* //user display option */}
         <div className="navbar-end">
+          <div className="mr-3">
+            {changeColor ? (
+              <button
+                onClick={() => setChangeColor(!changeColor)}
+                className="px-2 py-2 bg-slate-900 text-white rounded-full "
+              >
+                <FaMoon />
+              </button>
+            ) : (
+              <button
+                onClick={() => setChangeColor(!changeColor)}
+                className="px-2 py-2 bg-white  rounded-full"
+              >
+                <BsSunFill></BsSunFill>
+              </button>
+            )}
+          </div>
           <Link to="/login">
             <button className="px-4 py-1 bg-slate-100 rounded-md hover:bg-slate-300 mr-3">
               Login
