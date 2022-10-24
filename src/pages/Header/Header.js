@@ -51,7 +51,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
         </div>
 
         {/* navbar center */}
@@ -85,6 +85,7 @@ const Header = () => {
               Login
             </button>
           </Link>
+
           <FaUser></FaUser>
         </div>
       </div>
