@@ -116,6 +116,7 @@ const Header = () => {
           <div className="mr-3">
             {changeColor ? (
               <button
+                title="Dark Mode"
                 onClick={() => setChangeColor(!changeColor)}
                 className="px-2 py-2 bg-slate-900 text-white rounded-full "
               >
@@ -123,6 +124,7 @@ const Header = () => {
               </button>
             ) : (
               <button
+                title="Light Mode"
                 onClick={() => setChangeColor(!changeColor)}
                 className="px-2 py-2 bg-white  rounded-full"
               >
@@ -143,8 +145,10 @@ const Header = () => {
               <label
                 tabIndex={0}
                 className="btn btn-ghost btn-circle avatar ml-1"
+                id="user-container"
               >
-                <div title={user?.displayName} className="w-10 rounded-full">
+                <span id="user-text">{user?.displayName}</span>
+                <div className="w-10 rounded-full">
                   <img src={user?.photoURL} />
                 </div>
               </label>
