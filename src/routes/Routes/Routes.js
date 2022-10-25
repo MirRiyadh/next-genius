@@ -8,6 +8,7 @@ import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
 import WhyUs from "../../pages/WhyUs/WhyUs";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import PrivateRoute from "../PrivateRoutes/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/courses",
-        element: <Courses></Courses>,
+        element: (
+          <PrivateRoute>
+            <Courses></Courses>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/whyus",
