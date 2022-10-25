@@ -4,6 +4,7 @@ import { FaUser, FaMoon } from "react-icons/fa";
 import { BsSunFill } from "react-icons/bs";
 import "./Header.css";
 import { AuthContext } from "../../contexts/AuthProvider";
+import logo from "../../assets/logo/onlinelogomaker-102522-1946-5952-2000-transparent.png";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -80,7 +81,9 @@ const Header = () => {
               )}
             </ul>
           </div>
-          <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
+          <Link to="/" className="btn btn-ghost normal-case text-xl pl-0">
+            <img src={logo} className="w-32 h-6 md:w-52  md:h-8" />
+          </Link>
         </div>
 
         {/* navbar center */}
