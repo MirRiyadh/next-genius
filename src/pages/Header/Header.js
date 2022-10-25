@@ -6,8 +6,16 @@ import "./Header.css";
 import { AuthContext } from "../../contexts/AuthProvider";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const [changeColor, setChangeColor] = useState(false);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   return (
     <div className="bg-gradient-to-l from-sky-200 via-sky-300 to-sky-200 shadow-md">
@@ -50,12 +58,26 @@ const Header = () => {
                 <Link to="/faq">FAQ</Link>
               </li>
               <hr />
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/register">Register</Link>
-              </li>
+
+              {user?.uid ? (
+                <div className="mt-2">
+                  <button
+                    onClick={handleLogout}
+                    className="px-4 py-1 bg-slate-200 rounded-md hover:bg-slate-300 font-semibold"
+                  >
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                  <li>
+                    <Link to="/register">Register</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
@@ -79,9 +101,13 @@ const Header = () => {
             <li>
               <Link to="/faq">FAQ</Link>
             </li>
-            <li>
-              <Link to="/register">Register</Link>
-            </li>
+            {user?.uid ? (
+              <></>
+            ) : (
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+            )}
           </ul>
         </div>
 
@@ -104,13 +130,37 @@ const Header = () => {
               </button>
             )}
           </div>
-          <Link to="/login">
-            <button className="px-4 py-1 bg-slate-100 rounded-md hover:bg-slate-300 mr-3">
-              Login
-            </button>
-          </Link>
-
-          <FaUser></FaUser>
+          {user?.uid ? (
+            <>
+              <div>
+                <button
+                  onClick={handleLogout}
+                  className="px-2 py-1 bg-slate-100 rounded-md hover:bg-slate-300 font-semibold"
+                >
+                  Logout
+                </button>
+              </div>
+              <label
+                tabIndex={0}
+                className="btn btn-ghost btn-circle avatar ml-1"
+              >
+                <div title={user?.displayName} className="w-10 rounded-full">
+                  <img src={user?.photoURL} />
+                </div>
+              </label>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <button className="px-4 py-1 bg-slate-100 rounded-md hover:bg-slate-300 mr-3">
+                  Login
+                </button>
+              </Link>
+              <div>
+                <FaUser></FaUser>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
