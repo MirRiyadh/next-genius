@@ -3,20 +3,32 @@ import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Category = ({ course }) => {
-  const { image_url, title, price, sales, rating, course_name, id } = course;
+  const {
+    image_url,
+    title,
+    price,
+    sales,
+    rating,
+    course_name,
+    id,
+    shortDetails,
+  } = course;
 
   return (
-    <div className="">
-      <div className="bg-red-300 p-3">
-        <img className="w-96" src={image_url} />
-        <h3 className="text-xl">{title}</h3>
-        <span className="flex items-center ">
-          <FaStar className="mr-1"></FaStar> {rating.number}
-        </span>
-        <p>${price}</p>
-        <button className="px-4 py-2 bg-white">
-          <Link to={`/courses-details/${id}`}>See details</Link>{" "}
-        </button>
+    <div className="card  bg-base-100 shadow-xl mx-4 mb-4 border rounded-md">
+      <figure>
+        <img className="w-full p-3" src={image_url} />
+      </figure>
+      <div className="card-body p-3">
+        <h2 className="card-title">{title}</h2>
+        <p className="text-sm text-gray-500">{shortDetails}</p>
+        <hr />
+        <div className="card-actions justify-between items-center">
+          <p>Author</p>
+          <button className=" py-2 px-5 bg-slate-500 rounded-md font-semibold">
+            Details
+          </button>
+        </div>
       </div>
     </div>
   );
