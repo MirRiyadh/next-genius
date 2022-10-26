@@ -1,0 +1,32 @@
+.img-container {
+  box-shadow: 4px 4px 8px rgb(226, 226, 226);
+  border-radius: 5px;
+
+  background-image: url(../../assets/photos/cover.png);
+  background-color: #eaf2f2;
+  height: 300px;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+  .card-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .img-container {
+    height: 390px;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+}

@@ -5,7 +5,7 @@ import Rightside from "./Rightside";
 
 const Courses = () => {
   const [categories, setCategories] = useState([]);
-  const [onlyCourses, setOnlyCourses] = useState([]);
+  const [allCourses, setAllCourses] = useState([]);
   const [categoriesname, setCategoriesName] = useState("");
 
   const courses = useLoaderData();
@@ -19,10 +19,10 @@ const Courses = () => {
   useEffect(() => {
     fetch("http://localhost:5000/courses")
       .then((res) => res.json())
-      .then((data) => setOnlyCourses(data));
+      .then((data) => setAllCourses(data));
   }, []);
 
-  console.log(onlyCourses);
+  console.log(allCourses);
 
   const handleCategoriesName = (categoriesname) => {
     setCategoriesName(categoriesname);
@@ -65,9 +65,9 @@ const Courses = () => {
             </>
           ) : (
             <>
-              {onlyCourses?.map((course) => (
+              {allCourses?.map((course) => (
                 <div key={course.id}>
-                  {course.title} {course.rating.number}
+                  <Rightside course={course} key={course.id}></Rightside>
                 </div>
               ))}
             </>
