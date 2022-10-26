@@ -32,8 +32,11 @@ const CourseDetails = () => {
       <div className=" px-10 m-auto img-container text-center md:text-left">
         <div></div>
         <div className="md:pl-16 md:pt-16 ">
-          <button className="py-1 px-3 bg-cyan-300 font-semibold text-md mt-2">
+          <button className="py-1 px-3 bg-cyan-300 font-semibold text-md mt-2 mr-2">
             {course_name}
+          </button>
+          <button className="py-1 px-3 bg-indigo-400 text-white hover:bg-indigo-500 font-semibold text-md mt-2">
+            Download Pdf
           </button>
           <h1 className=" text-2xl md:text-5xl font-bold mt-2">{title}</h1>
           <div>
@@ -97,21 +100,21 @@ const CourseDetails = () => {
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Subject:
+              ● Subject:
             </span>{" "}
             {course_name}
           </p>
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Videos:
+              ● Videos:
             </span>{" "}
             60
           </p>
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Time:
+              ● Time:
             </span>{" "}
             {hours}/hr
           </p>
@@ -119,28 +122,28 @@ const CourseDetails = () => {
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Duration:
+              ● Duration:
             </span>{" "}
             6 Weeks
           </p>
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Ratings:
+              ● Ratings:
             </span>{" "}
             {rating.number}
           </p>
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Students:
+              ● Students:
             </span>{" "}
             {sales}
           </p>
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Author:
+              ● Instructor:
             </span>{" "}
             {author.name}
           </p>
@@ -148,7 +151,7 @@ const CourseDetails = () => {
           <p className="text-gray-500 my-2">
             {" "}
             <span className="font-bold text-gray-600 text-base">
-              Published Date:
+              ● Published Date:
             </span>{" "}
             {author.published_date}
           </p>
