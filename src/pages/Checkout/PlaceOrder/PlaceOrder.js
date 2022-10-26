@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const PlaceOrder = ({ item }) => {
@@ -7,7 +8,10 @@ const PlaceOrder = ({ item }) => {
   const shippingAmount = price + shipping;
   const total = shippingAmount.toFixed(2);
 
-  console.log(total);
+  const handleToast = () => {
+    toast.success("Successfully Purchase!");
+  };
+
   return (
     <div className="">
       <h1 className="font-bold text-lg text-gray-500">YOUR ORDER</h1>
@@ -52,7 +56,10 @@ const PlaceOrder = ({ item }) => {
            
       </div>
       <div>
-        <button className="bg-sky-600 hover:bg-sky-500 font-bold text-white uppercase py-2 px-5 mb-8">
+        <button
+          onClick={handleToast}
+          className="bg-sky-600 hover:bg-sky-500 font-bold text-white uppercase py-2 px-5 mb-8"
+        >
           <Link to="/thankyou">Place Order</Link>
         </button>
       </div>
