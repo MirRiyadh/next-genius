@@ -11,7 +11,7 @@ import FAQ from "../../pages/FAQ/FAQ";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
-import WhyUs from "../../pages/WhyUs/WhyUs";
+import AboutUs from "../../pages/WhyUs/AboutUs";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import PrivateRoute from "../PrivateRoutes/PrivateRoute";
 
@@ -29,8 +29,8 @@ export const router = createBrowserRouter([
         element: <Courses></Courses>,
       },
       {
-        path: "/whyus",
-        element: <WhyUs></WhyUs>,
+        path: "/about-us",
+        element: <AboutUs></AboutUs>,
       },
       {
         path: "/blog",
