@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main/Main";
 import Blog from "../../pages/Blog/Blog";
 import Category from "../../pages/Category/Category";
+import Checkout from "../../pages/Checkout/Checkout";
+import ThankyouPage from "../../pages/Checkout/ThankyouPage/ThankyouPage";
 import CourseDetails from "../../pages/CourseDetails/CourseDetails";
 import Courses from "../../pages/Courses/Courses";
 import Rightside from "../../pages/Courses/Rightside";
@@ -57,6 +59,12 @@ export const router = createBrowserRouter([
           fetch(`http://localhost:5000/courses/${params.id}`),
       },
       {
+        path: "checkout/:id",
+        element: <Checkout></Checkout>,
+        loader: async ({ params }) =>
+          fetch(`http://localhost:5000/courses/${params.id}`),
+      },
+      {
         path: "/courses/:id",
         element: <Courses></Courses>,
         loader: async ({ params }) =>
@@ -65,4 +73,5 @@ export const router = createBrowserRouter([
     ],
   },
   { path: "*", element: <ErrorPage></ErrorPage> },
+  { path: "/thankyou", element: <ThankyouPage></ThankyouPage> },
 ]);

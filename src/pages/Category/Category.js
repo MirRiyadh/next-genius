@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  FaArrowCircleRight,
-  FaArrowRight,
-  FaBook,
-  FaBookmark,
-  FaClock,
-  FaStar,
-} from "react-icons/fa";
+import { FaBook, FaBookmark, FaClock, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Category = ({ course }) => {
