@@ -11,6 +11,7 @@ import FAQ from "../../pages/FAQ/FAQ";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
+import TermsCondition from "../../pages/Terms&Condition/TermsCondition";
 import AboutUs from "../../pages/WhyUs/AboutUs";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import PrivateRoute from "../PrivateRoutes/PrivateRoute";
@@ -80,4 +81,5 @@ export const router = createBrowserRouter([
   },
   { path: "*", element: <ErrorPage></ErrorPage> },
   { path: "/thankyou", element: <ThankyouPage></ThankyouPage> },
+  { path: "/terms", element: <TermsCondition></TermsCondition> },
 ]);

@@ -16,8 +16,6 @@ const Category = ({ course }) => {
     author,
   } = course;
 
-  console.log(id);
-
   return (
     <div className="card  bg-base-100 shadow-xl mx-4 mb-4 border rounded-md">
       <figure>

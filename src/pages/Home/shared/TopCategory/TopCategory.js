@@ -14,8 +14,8 @@ const TopCategory = () => {
       <h1 className="py-3 lg:py-7 text-center font-bold text-2xl md:text-3xl lg:text-4xl md:text-left text-sky-500">
         Browse Popular Category
       </h1>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6   gap-4   ">
-        <div class="bg-rose-100 rounded-md">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6   gap-4   ">
+        <div className="bg-rose-100 rounded-md">
           <div className=" flex flex-col items-center py-5">
             <div>
               <img src={ArtificialIntelligence} className="w-12" />
@@ -30,7 +30,7 @@ const TopCategory = () => {
             </button>
           </div>
         </div>
-        <div class="bg-sky-100 rounded-md">
+        <div className="bg-sky-100 rounded-md">
           <div className=" flex flex-col items-center py-5">
             <div>
               <img src={DataScience} className="w-12" />
@@ -43,7 +43,7 @@ const TopCategory = () => {
             </button>
           </div>
         </div>
-        <div class="bg-purple-100 rounded-md">
+        <div className="bg-purple-100 rounded-md">
           <div className=" flex flex-col items-center py-5">
             <div>
               <img src={MachineLearning} className="w-12" />
@@ -58,7 +58,7 @@ const TopCategory = () => {
             </button>
           </div>
         </div>
-        <div class="bg-yellow-100 rounded-md">
+        <div className="bg-yellow-100 rounded-md">
           <div className=" flex flex-col items-center py-5">
             <div>
               <img src={Python} className="w-12" />
@@ -71,7 +71,7 @@ const TopCategory = () => {
             </button>
           </div>
         </div>
-        <div class="bg-emerald-100 rounded-md">
+        <div className="bg-emerald-100 rounded-md">
           <div className=" flex flex-col items-center py-5">
             <div>
               <img src={WebDevelopment} className="w-12" />
@@ -84,7 +84,7 @@ const TopCategory = () => {
             </button>
           </div>
         </div>
-        <div class="bg-pink-200 rounded-md">
+        <div className="bg-pink-200 rounded-md">
           <div className=" flex flex-col items-center py-5">
             <div>
               <img src={ReactLogo} className="w-12" />

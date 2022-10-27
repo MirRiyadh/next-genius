@@ -85,10 +85,8 @@ const Register = () => {
       return;
     }
 
-    if (!/(?=.*[A-Z].*[0-9].*[!@#$%^&*])/.test(password)) {
-      setError(
-        "type atleast one uppercase, one number & one speical character"
-      );
+    if (!/(?=.*[A-Z].*[0-9])/.test(password)) {
+      setError("First type atleast one uppercase, Then atleast one number");
       return;
     }
 
@@ -272,7 +270,10 @@ const Register = () => {
                 className="mr-2 text-md"
               />
               Accept{" "}
-              <Link to="/" className="text-md hover:underline text-sky-600">
+              <Link
+                to="/terms"
+                className="text-md hover:underline text-sky-600"
+              >
                 terms and conditions
               </Link>
             </span>

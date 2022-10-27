@@ -2,11 +2,11 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div class=" bg-gradient-to-br from-pink-50 to-indigo-100">
+    <div className=" bg-gradient-to-br from-pink-50 to-indigo-100">
       <h1 className="text-center py-3 text-4xl font-semibold underline text-sky-700">
         Frequently Asked Questions
       </h1>
-      <div class="  grid place-items-center md:w-7/12 lg:w-4/12 m-auto">
+      <div className="  grid place-items-center md:w-7/12 lg:w-4/12 m-auto">
         <div className=" my-12">
           <div className="bg-white">
             <div className="container px-4 py-8 mx-auto md:p-8">
