@@ -37,7 +37,7 @@ const Courses = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 ">
-        <div className=" my-2 md:pl-4 lg:pl-32 text-center md:text-left ">
+        <div className=" my-2 md:pl-4 lg:pl-56 text-center md:text-left ">
           <h2 className="pl-5 font-semibold text-slate-500 text-xl">
             Categories:
           </h2>
@@ -45,13 +45,13 @@ const Courses = () => {
 
           <div className="my-3 pl-5">
             {categories.map((category) => (
-              <p
+              <button
                 onClick={() => handleCategoriesName(category.name)}
-                className="my-1 mx-2 md:my-2 md:mx-0 py-2 px-3 inline-block md:block bg-sky-400 hover:bg-sky-300 rounded-sm mt-3 text-xs md:text-base font-semibold"
+                className="my-1 mx-2 md:my-2 md:mx-0 py-2 px-3 inline-block md:block bg-sky-400 hover:bg-sky-300 rounded-sm mt-3 text-xs md:text-base font-semibold w-60  md:text-left m-auto "
                 key={category.id}
               >
                 <Link to={`/courses/${category.id}`}>{category.name}</Link>
-              </p>
+              </button>
             ))}
           </div>
         </div>
