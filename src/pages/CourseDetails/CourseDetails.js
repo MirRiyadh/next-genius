@@ -7,8 +7,9 @@ import {
   FaUserGraduate,
 } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
-import cover from "../../assets/photos/cover.png";
+
 import "./CourseDetails.css";
+import DownloadPdf from "./DownloadPdf/DownloadPdf";
 
 const CourseDetails = () => {
   const courseDetails = useLoaderData();
@@ -28,15 +29,18 @@ const CourseDetails = () => {
   } = courseDetails;
   console.log(id, course_name);
   return (
-    <div>
+    <div id="downloadPage">
       <div className=" px-10 m-auto img-container text-center md:text-left">
         <div></div>
         <div className="md:pl-16 md:pt-16 ">
           <button className="py-1 px-3 bg-cyan-300 font-semibold text-md mt-2 mr-2">
             {course_name}
           </button>
-          <button className="py-1 px-3 bg-indigo-400 text-white hover:bg-indigo-500 font-semibold text-md mt-2">
-            Download Pdf
+          <button>
+            <DownloadPdf
+              elementId="downloadPage"
+              downloadFile="CourseDetails"
+            ></DownloadPdf>
           </button>
           <h1 className=" text-2xl md:text-5xl font-bold mt-2">{title}</h1>
           <div>

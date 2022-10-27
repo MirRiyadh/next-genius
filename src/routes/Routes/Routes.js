@@ -52,7 +52,9 @@ export const router = createBrowserRouter([
         path: "courses-details/:id",
         element: <CourseDetails></CourseDetails>,
         loader: async ({ params }) =>
-          fetch(`http://localhost:5000/courses/${params.id}`),
+          fetch(
+            `https://assignment-ten-server-eight.vercel.app/courses/${params.id}`
+          ),
       },
       {
         path: "checkout/:id",
@@ -62,13 +64,17 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: async ({ params }) =>
-          fetch(`http://localhost:5000/courses/${params.id}`),
+          fetch(
+            `https://assignment-ten-server-eight.vercel.app/courses/${params.id}`
+          ),
       },
       {
         path: "/courses/:id",
         element: <Courses></Courses>,
         loader: async ({ params }) =>
-          fetch(`http://localhost:5000/categories/${params.id}`),
+          fetch(
+            `https://assignment-ten-server-eight.vercel.app/categories/${params.id}`
+          ),
       },
     ],
   },

@@ -11,13 +11,13 @@ const Courses = () => {
   const courses = useLoaderData();
 
   useEffect(() => {
-    fetch("http://localhost:5000/categories")
+    fetch("https://assignment-ten-server-eight.vercel.app/categories")
       .then((res) => res.json())
       .then((data) => setCategories(data));
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("https://assignment-ten-server-eight.vercel.app/courses")
       .then((res) => res.json())
       .then((data) => setAllCourses(data));
   }, []);
