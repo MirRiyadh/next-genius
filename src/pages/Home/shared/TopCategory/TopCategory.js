@@ -98,9 +98,6 @@ const TopCategory = () => {
           </div>
         </div>
       </div>
-      <button>
-        <Link to="courses/02">click here</Link>{" "}
-      </button>
     </div>
   );
 };
