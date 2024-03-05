@@ -49,7 +49,7 @@ const Category = ({ course }) => {
           <img className="w-8 h-8 shadow rounded-full" src={author.img} />{" "}
           <p className="font-semibold text-slate-700"> {author.name}</p>
           <button className=" py-2 px-5 bg-indigo-400 hover:bg-indigo-600  rounded-md font-semibold flex items-center text-white font-bold">
-            <Link to={`/courses-details/${id}`}>Details </Link>
+            <Link to={`/courses-details/${id}`}>Details Link </Link>
             <FaBook className="ml-1" />
           </button>
         </div>
